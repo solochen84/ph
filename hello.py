@@ -8,6 +8,7 @@ from flask import Flask
 import os
 import redis
 import ctypes
+import time
 
 app = Flask(__name__)
 
@@ -38,4 +39,5 @@ def index():
     return 'chenxiaolu46oooo6'
 
 if __name__ == '__main__':
+	time.sleep(3600)
     app.run(host='0.0.0.0',port=5000)
