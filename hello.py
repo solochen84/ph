@@ -39,7 +39,8 @@ def hello():
 @app.route('/index')
 def index():
     url='http://'+envExternalUrl
-    return redirect(url)
+    r = requests.get(url)
+    return 'hello'+r.text
     
 
 if __name__ == '__main__':
