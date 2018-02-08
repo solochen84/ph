@@ -3,12 +3,13 @@
 
 __author__ = 'cloudtogo'
 
-from flask import render_template
+from flask import render_template, redirect
 from flask import Flask
 import os
 import redis
 import ctypes
 import time
+import requests
 
 app = Flask(__name__)
 
@@ -21,6 +22,7 @@ msg = 'Hello, world!'
 envURL = os.environ.get("WEBIDE")
 envRedis = os.environ.get("REDIS")
 envRedisPort = os.environ.get("REDIS_PORT")
+envExternalUrl = os.environ.get("EXTERNAL_URL")
 
 @app.route('/')
 def hello():
@@ -36,8 +38,9 @@ def hello():
 
 @app.route('/index')
 def index():
-    return 'chenxiaolu46oooo6'
+    url='http://'+envExternalUrl
+    return redirect(url)
+    
 
 if __name__ == '__main__':
-    time.sleep(3600)
     app.run(host='0.0.0.0',port=5000)
