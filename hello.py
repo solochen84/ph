@@ -23,6 +23,7 @@ envURL = os.environ.get("WEBIDE")
 envRedis = os.environ.get("REDIS")
 envRedisPort = os.environ.get("REDIS_PORT")
 envExternalUrl = os.environ.get("EXTERNAL_URL")
+envFileInput = os.environ.get("FILEINPUT")
 
 @app.route('/')
 def hello():
@@ -38,9 +39,9 @@ def hello():
 
 @app.route('/index')
 def index():
-    url='http://'+envExternalUrl
-    r = requests.get(url)
-    return 'hello'+r.text
+    #url='http://'+envExternalUrl
+    #r = requests.get(url)
+    return 'hello'+envFileInput
     
 
 if __name__ == '__main__':
