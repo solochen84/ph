@@ -10,6 +10,7 @@ import redis
 import ctypes
 import time
 import requests
+import socket
 
 app = Flask(__name__)
 
@@ -41,7 +42,8 @@ def hello():
 def index():
     #url='http://'+envExternalUrl
     #r = requests.get(url)
-    return 'hello'+envFileInput
+    ip = socket.gethostbyname(socket.gethostname())
+    return 'hello'+ip
     
 
 if __name__ == '__main__':
