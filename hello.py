@@ -24,6 +24,7 @@ envRedisPort = os.environ.get("REDIS_PORT")
 @app.route('/')
 def hello():
     r = redis.StrictRedis(host=str(envRedis), port=25317)
+    print("helo")
     hits = r.get('hits')
     if hits:
         hits = r.get('hits').decode('utf-8')
