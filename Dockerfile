@@ -1,6 +1,5 @@
 # 基础镜像信息
-#FROM registry.local/factory/pythonbase:1.0
-FROM registry.cn-shenzhen.aliyuncs.com/tl_namespace/python_base:latest
+FROM registry.local/factory/pythonbase:1.0
 # 创建目录
 RUN mkdir -p /usr/local/ph
 # 拷贝文件
