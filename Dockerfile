@@ -23,14 +23,15 @@ RUN echo "deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restric
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe" >> /etc/apt/sources.list
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse" >> /etc/apt/sources.list
 
-RUN apt-get remove python-pip python3-pip
+RUN apt-get update && apt-get install -y wget
+RUN apt-get remove python-pip python3-pip 
+RUN apt-get install -y python3
+RUN python3 get-pip.py 
 
-RUN apt-get update && \
-    apt-get install -y \
-    python3 python3-numpy python3-nose python3-pandas python-h5py \
+RUN apt-get install -y \
+    python3-numpy python3-nose python3-pandas python-h5py \
     python python-numpy python-nose python-pandas python3-h5py \
-    pep8 python-pip python3-pip python-wheel \
-    python-sphinx
+    pep8 python-wheel  python-sphinx 
 
 # 创建目录
 RUN mkdir -p /usr/local/ph
@@ -39,7 +40,7 @@ ADD ./ /usr/local/ph
 # 设置工作目录
 WORKDIR /usr/local/ph
 # 安装requirements
-RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python", "./main.py"]
+RUN /usr/local/bin/pip3 install --no-cache-dir -r requirements.txt
+CMD ["python3", "./main.py"]
 EXPOSE 5000
 
