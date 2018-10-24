@@ -23,7 +23,7 @@ RUN echo "deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restric
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe" >> /etc/apt/sources.list
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y wget
+RUN apt-key update && apt-get update && apt-get install -y wget
 RUN apt-get remove python-pip python3-pip 
 RUN apt-get install -y python3
 RUN python3 get-pip.py 
