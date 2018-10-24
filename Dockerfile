@@ -12,15 +12,6 @@ RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted uni
 RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
 RUN apt-get update
 
-RUN apt-get update && \
-    apt-get install -y \
-    python3 python3-numpy python3-nose python3-pandas python-h5py \
-    python python-numpy python-nose python-pandas python3-h5py \
-    pep8 python-pip python3-pip python-wheel \
-    python-sphinx && \
-    pip install --upgrade setuptools
-
-
 # 创建目录
 RUN mkdir -p /usr/local/ph
 # 拷贝文件
