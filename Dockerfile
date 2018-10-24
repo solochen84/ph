@@ -25,7 +25,7 @@ RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse" >> /
 
 RUN apt-key update && apt-get update && apt-get install -y wget
 RUN apt-get remove python-pip python3-pip 
-RUN apt-get install -y python3
+RUN apt-get install -y python3 python
 RUN wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate 
 RUN python get-pip.py && python3 get-pip.py 
 
