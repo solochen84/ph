@@ -13,6 +13,7 @@ RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted un
 RUN apt-get update
 
 
+
 # 创建目录
 RUN mkdir -p /usr/local/ph
 # 拷贝文件
