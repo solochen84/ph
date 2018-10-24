@@ -12,7 +12,7 @@ RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-updates main restricted univ
 RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-proposed main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb http://mirrors.163.com/ubuntu/ trusty-backports main restricted universe multiverse" >> /etc/apt/sources.list
 RUN apt-get update
-RUN pip install --upgrade pip
+
 
 # 创建目录
 RUN mkdir -p /usr/local/ph
