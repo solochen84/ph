@@ -23,6 +23,8 @@ RUN echo "deb-src http://mirrors.aliyun.com/ubuntu/ xenial-security main restric
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security universe" >> /etc/apt/sources.list
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security multiverse" >> /etc/apt/sources.list
 
+RUN apt-get remove python-pip python3-pip
+
 RUN apt-get update && \
     apt-get install -y \
     python3 python3-numpy python3-nose python3-pandas python-h5py \
