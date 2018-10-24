@@ -35,10 +35,13 @@ RUN apt-get install -y \
 
 # 创建目录
 RUN mkdir -p /usr/local/ph
+
 # 拷贝文件
 ADD ./ /usr/local/ph
+
 # 设置工作目录
 WORKDIR /usr/local/ph
+
 # 安装requirements
 RUN /usr/local/bin/pip3 install --no-cache-dir -r requirements.txt
 CMD ["python3", "./main.py"]
