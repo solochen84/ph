@@ -27,7 +27,8 @@ RUN apt-key update && apt-get update && apt-get install -y wget
 RUN apt-get remove python-pip python3-pip 
 RUN apt-get install -y python3 python
 RUN wget https://bootstrap.pypa.io/get-pip.py --no-check-certificate 
-RUN python get-pip.py && python3 get-pip.py 
+RUN python get-pip.py 
+RUN python3 get-pip.py 
 
 RUN apt-get install -y \
     python3-numpy python3-nose python3-pandas python-h5py \
