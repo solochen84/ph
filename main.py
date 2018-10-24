@@ -1,7 +1,7 @@
 #!flask/bin/python
 # -- coding: utf-8 --
 
-__author__ = 'cloudtogo'
+__author__ = 'luye'
 
 from flask import Flask
 
