@@ -1,6 +1,4 @@
 # 基础镜像信息
-
-
 FROM ubuntu:16.04
 
 RUN echo "deb-src http://archive.ubuntu.com/ubuntu xenial main restricted" > /etc/apt/sources.list
