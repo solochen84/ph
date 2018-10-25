@@ -1,7 +1,5 @@
 # 基础镜像信息
-#FROM registry.local/factory/pythonbase:1.0
-#FROM registry.local/factory/pythonbase:3.5
-#FROM brie/docker-numpy-scipy
+
 
 FROM ubuntu:16.04
 
