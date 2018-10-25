@@ -41,6 +41,7 @@ RUN mkdir -p /usr/local/ph
 # 拷贝文件
 ADD ./ /usr/local/ph
 
+
 # 设置工作目录
 WORKDIR /usr/local/ph
 
