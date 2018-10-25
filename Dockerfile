@@ -46,6 +46,6 @@ WORKDIR /usr/local/ph
 
 # 安装requirements
 RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
-CMD ["python", "./main.py"]
+CMD ["python3", "./main.py"]
 EXPOSE 5000
 
