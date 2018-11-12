@@ -25,7 +25,6 @@ RUN mkdir -p /usr/local/ph
 # 拷贝文件
 ADD ./ /usr/local/ph
 
-
 # 设置工作目录
 WORKDIR /usr/local/ph
 
@@ -33,4 +32,3 @@ WORKDIR /usr/local/ph
 RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
 CMD ["python3", "./main.py"]
 EXPOSE 5000
-
