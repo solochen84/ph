@@ -6,7 +6,6 @@ RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-security main restricted 
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted universe multiverse" >> /etc/apt/sources.list
 RUN echo "deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse" >> /etc/apt/sources.list
 
-
 RUN apt-key update && apt-get update && apt-get install -y wget
 RUN apt-get remove python-pip python3-pip 
 RUN apt-get install -y python3 python
