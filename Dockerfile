@@ -1,5 +1,5 @@
 # 基础镜像信息
-FROM ubuntu:16.04
+FROM registry.local/factory/pythonbase:3.5
 
 # 创建目录
 RUN mkdir -p /usr/local/ph
@@ -11,6 +11,6 @@ ADD ./ /usr/local/ph
 WORKDIR /usr/local/ph
 
 # 安装requirements
-RUN /usr/local/bin/pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 CMD ["python", "./main.py"]
 EXPOSE 5000
